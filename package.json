@@ -1,0 +1,24 @@
+{
+  "name": "ms-authentication",
+  "version": "1.0.0",
+  "description": "Microservice de auteticação criado durante estudos",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfdsn/Micro-Service-Nodejs.git"
+  },
+  "author": "Jonathan F.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfdsn/Micro-Service-Nodejs/issues"
+  },
+  "homepage": "https://github.com/jfdsn/Micro-Service-Nodejs#readme",
+  "devDependencies": {
+    "@types/node": "^18.6.2"
+  }
+}
