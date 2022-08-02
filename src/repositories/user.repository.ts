@@ -65,6 +65,20 @@ class UserRepository {
         const values = [uuid];
         await database.query(query, values);
     }
+
+    async FindByUsernameAndPassword(username: string, password: string) {
+      const query = `
+         SELECT uuid, username 
+         FROM application_user
+         WHERE username = $1
+         AND password = crypto($2, 'el_salty');
+      `;
+
+      const values = [username, password];
+      const { rows } = await database.query<User>(query, values);
+      const [user] = rows;
+      return !user ? null : user;
+    }
 }
 
 export default new UserRepository();
